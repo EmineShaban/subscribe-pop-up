@@ -17,6 +17,8 @@
 }
 
 .pop-up-bg {
+    font-family: 'Poppins', sans-serif;
+
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -42,19 +44,20 @@
 .pop-up {
     position: relative;
     outline: none;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    /* height: 500px; */
     border-radius: 5px;
     transform-origin: center center;
     box-shadow: 0px 0px 21px 0px rgb(0 0 0 / 20%);
     background-color: rgb(255, 255, 255);
-    top: 120px;
+    top: 25%;
     left: 0px;
     opacity: 1;
     z-index: 999;
     text-align: center;
     margin: auto;
     display: flex;
+    padding: 15px;
 }
 
 .pop-up-content {
@@ -63,17 +66,27 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    width: 90%;
+    margin: auto;
 }
 
-.pop-up-content h3 {
-    font-size: 19px;
-    padding: 10px;
+.pop-up-content h4 {
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500;
+
 }
 
-input {
-    margin: 5px;
+.email-collect-form input {
+    margin: 8px 5px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 9px 0;
+    font-size: 12px;
+    border-radius: 7px;
+    margin-top: 0px;
+
 }
 
 .pop-up-content img {
@@ -107,14 +120,19 @@ input {
     flex-direction: column;
 }
 
-.email-collect-form .btn {
+.email-collect-form .btn-pop-up {
     background-color: #f54400;
-    border-radius: 20px;
+    border-radius: 7px;
     border: none;
     color: white;
-    padding: 15px 20px;
+    /* padding: 12px 10px; */
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 3px;
+    border: 1px solid #f54400;
 }
 
 .invalid_email {
@@ -149,7 +167,9 @@ input {
     width: 100%;
     display: none;
 }
-
+.pop-up-content .pop-up-products{
+    width: 60%;
+}
 @media(max-width:768px) {
     .pop-up {
         width: 350px;
@@ -160,7 +180,36 @@ input {
         margin: 0px;
     }
 }
+@media(max-width:768px) {
+    .pop-up {
+        width: 300px;
+        padding: 5px;
 
+    }
+    .pop-up-bg { 
+        height: 100%;
+    }
+
+    .pop-up-content .pop-up-products {
+        width: 80%;
+    }
+    .email-collect-form input { 
+        width: 90%;
+    }
+    .email-collect-form .btn-pop-up { 
+        width: 90%;
+    }
+
+    .pop-up-content { 
+        width: 95%;
+    }
+
+
+
+
+
+
+}
 
 /* new */
 
